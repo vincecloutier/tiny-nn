@@ -8,6 +8,7 @@ def nonlin(x,deriv=False):
  
 # input data
 X = np.array([[0,0,1], [0,1,1], [1,0,1], [1,1,1]])
+
 #output data
 y = np.array([[0],[1],[1],[0]])
 
@@ -18,6 +19,7 @@ np.random.seed(1)
 syn0 = 2*np.random.random((3,4)) - 1
 syn1 = 2*np.random.random((4,1)) - 1
 
+# thinking loop
 for j in range(60000):
 
     # forward propagation
