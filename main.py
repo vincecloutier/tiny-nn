@@ -1,8 +1,8 @@
 import numpy as np
 
 # sigmoid function
-def nonlin(x, deriv=False):
-    if deriv:
+def nonlin(x,deriv=False):
+    if(deriv==True):
         return x*(1-x)
     return 1/(1+np.exp(-x))
 
@@ -10,13 +10,15 @@ def nonlin(x, deriv=False):
 X = np.array([[0,0,1], [0,1,1], [1,0,1], [1,1,1]])
 
 # output data
-y = np.array([[0,0,0,1]]).T
+y = np.array([[0,1,1,0]])
 
 # seed random numbers to make calculation deterministic (just a good practice)
 np.random.seed(1)
 
-# initialize weights randomly with mean 0
-syn0 = 2*np.random.random((3,1)) - 1
+# randomly initialize weights with mean 0
+syn0 = 2*np.random.random((3,4)) - 1
+syn1 = 2*np.random.random((4,1)) - 1
+
 
 for iter in range(10000):
 
