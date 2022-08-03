@@ -1,2 +1,2 @@
 # Project Description
-Creating simple neural networks from scratch.
+Simple neural networks built from scratch.
