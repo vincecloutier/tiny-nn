@@ -17,3 +17,21 @@ np.random.seed(1)
 
 # initialize weights randomly with mean 0
 syn0 = 2*np.random.random((3,1)) - 1
+
+for iter in range(10000):
+
+    # forward propagation
+    l0 = X # first layer, specified by the input data
+    l1 = nonlin(np.dot(l0, syn0)) # second or hidden layer
+
+    # how much did we miss?
+    l1_error = y - l1
+
+    # multiply how much we missed by the slope of the sigmoid at the values in layer 1 (l1)
+    l1_delta = l1_error * nonlin(l1, True)
+
+    # update weights
+    syn0 += np.dot(l0.T, l1_delta)
+
+print("Output After Training:")
+print(l1)
