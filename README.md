@@ -9,4 +9,4 @@ The problem of image recognition is quite similar to this problem as instead of 
 | 1       | 0       | 1       | 1      |
 | 1       | 1       | 1       | 0      |
 
-In this case it's a combination of Input 1 & 2.
+In this example it would be a combination of Input 1 & 2.
